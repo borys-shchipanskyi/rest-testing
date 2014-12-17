@@ -7,9 +7,6 @@ import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-/**
- * Created by borys.shchypanskyi on 12/16/2014.
- */
 public class RestClient {
     public static JSONObject restGet(String str_url) throws JSONException {
         JSONObject jsonObj;
@@ -30,8 +27,6 @@ public class RestClient {
                     (conn.getInputStream())));
 
             String output;
-
-            System.out.println("Output from Server .... \n");
 
             while ((output = br.readLine()) != null) {
                 json_out += output;
@@ -62,11 +57,11 @@ public class RestClient {
             BufferedReader br = new BufferedReader(new InputStreamReader(
                     (conn.getInputStream())));
 
-            String output;
+            /*String output;
             System.out.println("Output from Server .... \n");
             while ((output = br.readLine()) != null) {
                 System.out.println(output);
-            }
+            }*/
             br.close();
             conn.disconnect();
 

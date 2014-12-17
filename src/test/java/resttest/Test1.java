@@ -5,9 +5,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import rest.RestClient;
 
-/**
- * Created by borys.shchypanskyi on 12/17/2014.
- */
 public class Test1 {
     private RestClient restClient = new RestClient();
     @Test
