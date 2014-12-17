@@ -5,6 +5,7 @@
             <class name="resttest.Test1"/>
             <class name="resttest.Test2"/>
             <class name="resttest.Test3"/>
+            <class name="resttest.Test4"/>
         </classes>
     </test>
 </suite>

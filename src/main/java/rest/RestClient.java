@@ -77,6 +77,39 @@ public class RestClient {
         }
     }
 
+    public void restPut(String str_url, JSONObject jsonObj){
+        try {
+            URL url = new URL(str_url);
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setDoOutput(true);
+            conn.setRequestMethod("PUT");
+            conn.setRequestProperty("Content-Type", "application/json");
+            //conn.setConnectTimeout(5000);
+            //conn.setReadTimeout(5000);
+
+            OutputStreamWriter out = new OutputStreamWriter(conn.getOutputStream());
+            out.write(jsonObj.toString());
+            out.close();
+
+            restCode = conn.getResponseCode();
+
+            //BufferedReader br = new BufferedReader(new InputStreamReader(
+             //       (conn.getInputStream())));
+
+            /*String output;
+            System.out.println("Output from Server .... \n");
+            while ((output = br.readLine()) != null) {
+                System.out.println(output);
+            }*/
+           // br.close();
+            conn.disconnect();
+
+        } catch (Exception e){
+            System.out.println(String.format("Exception: %s in PUT", e.getClass()));
+            e.printStackTrace();
+        }
+    }
+
     public int getRestCode(){
         return this.restCode;
     }

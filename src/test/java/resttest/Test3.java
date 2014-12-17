@@ -3,10 +3,11 @@ package resttest;
 import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+    /*
+    *step1: Try to GET info from URL with not real id and save as json
+    *step2: Check if response code equals 500
+    */
 
-/**
- * Created by borys.shchypanskyi on 12/17/2014.
- */
 public class Test3 extends Tests{
     private int ID = 777;
 

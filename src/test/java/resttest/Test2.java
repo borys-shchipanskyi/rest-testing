@@ -10,6 +10,11 @@ import rest.RestClient;
  * Created by borys.shchypanskyi on 12/17/2014.
  */
 public class Test2 extends Tests{
+    /*
+    *step1: GET info from URL and save as json
+    *step2: change some values in  json info and do POST request
+    *step3: GET new json info and compere it with first not changed info
+    */
 
     private int ID = 5;
 
